@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "bun run src/index.ts",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build src/index.ts --outdir ."
   },
   "dependencies": {
     "hono": "^4.4.12"

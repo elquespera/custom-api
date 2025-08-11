@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    env_file:
+      - ".env"
+    ports:
+      - "${DOCKER_PORT}:3000"
+    restart: always
