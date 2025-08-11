@@ -1,4 +1,5 @@
 import { Hono } from "hono";
+import { cors } from "hono/cors";
 import { logger } from "hono/logger";
 import { statusRoute } from "./statusRoute";
 import { checkWordRoute, randomWordRoute } from "./wordsRoute";
@@ -6,6 +7,7 @@ import { checkWordRoute, randomWordRoute } from "./wordsRoute";
 const app = new Hono();
 
 app.use(logger());
+app.use("/api/*", cors());
 
 app.route("/api/status", statusRoute);
 
